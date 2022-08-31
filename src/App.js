@@ -12,7 +12,7 @@ function App() {
       <button onClick={() => dispatch({ type: UP_ACTION })}>Up</button>
       <button onClick={() => dispatch({ type: DOWN_ACTION })}>down</button>
       <button onClick={() => dispatch({ type: RESET_ACTION })}>reset</button>
-      <button onClick={() => dispatch({ type: RESET_ACTION })}>reset</button>
+      <button onClick={() => dispatch({ type: RANDOM_ACTION })}>random </button>
     </div>
   );
 }
