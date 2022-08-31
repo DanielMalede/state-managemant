@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import './App.css';
-import { UP_ACTION,DOWN_ACTION,RESET_ACTION } from './store/actions/counter.action';
+import { UP_ACTION, DOWN_ACTION, RESET_ACTION } from './store/actions/counter.action';
 import reducer from './store/reducers/counter-reducer';
 
 let initialstate = 0
