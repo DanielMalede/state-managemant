@@ -14,5 +14,4 @@ function CounterProvider({children}) {
     </div>
   );
 };
-
 export default CounterProvider;
