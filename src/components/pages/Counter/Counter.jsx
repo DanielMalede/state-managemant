@@ -1,19 +1,14 @@
 import "./Counter.css";
 import React from "react";
-import {
-  upCounterAction,
-  downCounterAction,
-  resetCounterAction,
-  randomCounterAction,
-  userNumberCounterAction,
-} from "../../../store/actions/counter.action";
+import {upCounterAction,downCounterAction,resetCounterAction,randomCounterAction,userNumberCounterAction,} 
+from "../../../store/actions/counter.action";
 import { useRef } from "react";
 import { useContext } from "react";
 import { counterContext } from "../../../context/Counter-Context/Counter-Context";
 
 function Counter() {
-  const userNumber = useRef(0);
   const { conterState, dispatch } = useContext(counterContext);
+  const userNumber = useRef(0);
   return (
     <div className="counter">
       <h1>Counter</h1>
