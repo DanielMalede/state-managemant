@@ -19,11 +19,7 @@ function Counter() {
       <button onClick={() => dispatch(downCounterAction())}>down</button>
       <button onClick={() => dispatch(resetCounterAction())}>reset</button>
       <button onClick={() => dispatch(randomCounterAction())}>random </button>
-      <button
-        onClick={() =>
-          dispatch(userNumberCounterAction(+userNumber.current.value))
-        }
-      >
+      <button onClick={() => dispatch(userNumberCounterAction(+userNumber.current.value))}>
         user Number{" "}
       </button>
       <br></br>
