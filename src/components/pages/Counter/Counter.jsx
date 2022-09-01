@@ -8,7 +8,7 @@ import { counterContext } from "../../../context/Counter-Context/Counter-Context
 
 function Counter() {
   const { conterState, dispatch } = useContext(counterContext);
-  const userNumber = useRef(0);
+  const userNumber = useRef(conterState);
   return (
     <div className="counter">
       <h1>Counter</h1>
@@ -28,7 +28,7 @@ function Counter() {
       </button>
       <br></br>
       <br></br>
-      <input ref={userNumber} type="number" />
+      <input  ref={userNumber} type="number" />
     </div>
   );
 }
