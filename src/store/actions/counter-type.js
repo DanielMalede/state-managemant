@@ -1,0 +1,5 @@
+export const UPDATE_COUNTER = "UPDATE_COUNTER"
+export const UP_ACTION = "UP"
+export const DOWN_ACTION = "DOWN"
+export const RESET_ACTION = "RESET"
+export const RANDOM_ACTION = "RANDON"

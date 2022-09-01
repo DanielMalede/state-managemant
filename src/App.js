@@ -1,18 +1,23 @@
-import { useReducer } from 'react';
+import { useReducer, useRef } from 'react';
 import './App.css';
-import { UP_ACTION, DOWN_ACTION, RESET_ACTION, RANDOM_ACTION } from './store/actions/counter.action';
+import {updateCounter,downAction,upAction,resetAction,randomAction } from './store/actions/counter.action';
 import reducer from './store/reducers/counter-reducer';
 let initialstate = 0
 function App() {
   const [state, dispatch] = useReducer(reducer, initialstate);
+  const userNumber = useRef(0)
+  console.log(userNumber.current.value);
   return (
     <div className="App">
       {state}
       <br></br>
-      <button onClick={() => dispatch({ type: UP_ACTION })}>Up</button>
-      <button onClick={() => dispatch({ type: DOWN_ACTION })}>down</button>
-      <button onClick={() => dispatch({ type: RESET_ACTION })}>reset</button>
-      <button onClick={() => dispatch({ type: RANDOM_ACTION })}>random </button>
+      <button onClick={() => dispatch(upAction())}>Up</button>
+      <button onClick={() => dispatch(downAction())}>down</button>
+      <button onClick={() => dispatch(resetAction())}>reset</button>
+      <button onClick={() => dispatch(randomAction())}>random </button>
+      <button onClick={() => dispatch(updateCounter(+userNumber.current.value))}>user Number </button>
+      <br></br>
+      <input ref={userNumber} type="number" />
     </div>
   );
 }

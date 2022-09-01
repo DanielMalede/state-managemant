@@ -1,4 +1,4 @@
-import { UP_ACTION, DOWN_ACTION, RESET_ACTION, RANDOM_ACTION } from "../actions/counter.action"
+import { UPDATE_COUNTER,DOWN_ACTION,UP_ACTION,RESET_ACTION,RANDOM_ACTION  } from "../actions/counter-type"
 export default function reducer(state, action) {
     switch (action.type) {
         case UP_ACTION:
@@ -9,7 +9,9 @@ export default function reducer(state, action) {
             return 0
         case RANDOM_ACTION:
             return Math.floor(Math.random() * 101)
-        default:
+        case UPDATE_COUNTER:
+            return action.payload
+        default: 
             return state
     }
 
