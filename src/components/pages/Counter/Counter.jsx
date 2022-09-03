@@ -1,7 +1,12 @@
 import "./Counter.css";
 import React from "react";
-import {upCounterAction,downCounterAction,resetCounterAction,randomCounterAction,userNumberCounterAction,} 
-from "../../../store/actions/counter.action";
+import {
+  upCounterAction,
+  downCounterAction,
+  resetCounterAction,
+  randomCounterAction,
+  userNumberCounterAction,
+} from "../../../store/actions/counter.action";
 import { useRef } from "react";
 import { useContext } from "react";
 import { counterContext } from "../../../context/Counter-Context/Counter-Context";
@@ -19,11 +24,16 @@ function Counter() {
       <button onClick={() => dispatch(downCounterAction())}>down</button>
       <button onClick={() => dispatch(resetCounterAction())}>reset</button>
       <button onClick={() => dispatch(randomCounterAction())}>random </button>
-      <button onClick={() => dispatch(userNumberCounterAction(+userNumber.current.value))}>user Number{" "}
+      <button
+        onClick={() =>
+          dispatch(userNumberCounterAction(+userNumber.current.value))
+        }
+      >
+        user Number{" "}
       </button>
       <br></br>
       <br></br>
-      <input  ref={userNumber} type="number" />
+      <input ref={userNumber} type="number" />
     </div>
   );
 }
